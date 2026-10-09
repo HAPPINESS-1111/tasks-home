@@ -1,0 +1,388 @@
+/* Mama Put Kitchen — starter stylesheet
+   Colours and fonts are ready for you. Build the layout below.
+   See BRIEF.md for the full task list and specs. */
+
+:root{
+  --green:#0F4C3A; --yellow:#F2B705; --red:#C8331E; --paper:#FFFDF6; --ink:#1C1C1C; --muted:#5B5B52;
+  --font:"Bricolage Grotesque", system-ui, sans-serif;
+}
+
+*{box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* TODO 1: Build the sticky header: logo left, links and button right. */
+
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.5}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.fa-solid{
+  color: red;
+  font-size: 50px;
+}
+
+.nav a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.btn-dark{
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.site-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  border-bottom: 4px solid black;
+  position: sticky 0;
+  z-index: 20px;
+  background-color: white;
+}
+
+.nav .btn-dark{
+  color: white;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+.hero{
+  display: flex;
+  padding: 60px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1{
+font-size: 5rem;
+font-weight: 800;
+/* max-width: 500px; */
+}
+
+.hero-text p{
+  margin: 1.5rem 0rem 2rem;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 2px solid;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 1rem 1.5rem;
+}
+
+.perks{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.perks li{
+display: flex;
+gap: 0.5rem;
+align-items: center;
+}
+
+.hero-media{
+  position: relative;
+}
+
+.hero-img{
+border-radius: 40px;
+}
+
+.sticker{
+  background-color: #C8331E;
+  color: white;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+.hero-media .info-box{
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  background: #FFFDF6;
+  width: 150px;
+  padding: 12px 14px;
+  height: auto;
+  border-radius: 10px;
+  font-size: 11px;
+  box-shadow: 5px 5px;
+  border: 300px;
+}
+
+.menu{
+  background: #165a72;
+  padding: 50px 24px;
+}
+
+.menu .section-head{
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: var(--paper);
+}
+
+.menu .section-head h2{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#how{
+  background-color: var(--paper);
+  padding: 70px 60px;
+}
+
+.menu .section-head p{
+  font-size: 12px;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.cards{
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.card{
+  background: var(--paper);
+  border-radius: 15px;
+  padding: 10px;
+  position: relative;
+}
+
+.cards .tag{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--paper);
+  color: var(--muted);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+
+.card-price{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.card h3{
+  font-size: 14px;
+  margin: 12px 8px 4px 8px;
+}
+
+.card p{
+  font-size: 12px;
+  margin: 10px 8px 4px 8px;
+  opacity: 0.6;
+  line-height: 1.3;
+}
+
+.btn-small{
+  background: var(--yellow);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 8px 8px 8px;
+}
+
+#how{
+  background-color: var(--paper);
+  padding: 70px 60px;
+}
+
+.how h2{
+  font-size: 3rem;
+}
+
+.steps{
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.steps li{
+  border-top: 3px solid;
+  color: var(--ink);
+  padding-top: 1.3rem;
+  flex: 1;
+}
+
+.steps span{
+  background-color: var(--yellow);
+  font-size: 1.2rem;
+  width: 3erm;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-weight: 800;
+}
+
+.steps h3{
+  margin-bottom: 1.3rem;
+}
+
+.steps p{
+  color: var(--muted);
+}
+
+#about{
+  display: flex;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px
+}
+
+.site-footer{
+  background-color: var(--ink);
+  color: var(--paper);
+  display: flex;
+}
+
+.footer-top{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-col h4{
+  margin-top: 0.7rem;
+  color: var(--yellow);
+}
+
+.footer-col p{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  opacity: 0.8;
+}
+
+.footer-band p{
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.footer-band{
+  flex: 1 1 250px;
+}
+
+.copyright{
+  text-align: left;
+  border-top: 1px solid var(--muted);
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.site-footer{
+  margin-top: 2rem;
+}
+
+.footer-col p img{
+  filter: invert(1);
+  width: 18px;
+}
+
+
+/* TODO 1: Build the sticky header: logo left, links and button right. */
+/* TODO 2: Build the two-column hero. The sticker sits over the top-right corner of the image; the review card hangs off the bottom-left edge. */
+/* TODO 3: Build the three menu cards. They must be equal height, with buttons lined up along the bottom. */
+/* TODO 4: Build the three steps in a row with a thick top border on each. */
+/* TODO 5: Build the About section with the image on the right (without changing the HTML order). */
+/* TODO 6: Build the footer. The copyright line must take the full width of its own row. */
+/* TODO 7: Make it responsive: below 760px everything stacks into one column, the nav links hide and the menu icon shows. */ {
+  
+@media screen and (max-width: 760px){
+  body{
+    .menu-toggle{
+      display: block;
+    }
+    .nav{
+      display: none;
+    }
+    'hero{
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .how{
+      padding: 20px 10px;
+    }
+    .steps{
+      flex-direction: column;
+    }
+    .how h2{
+      font-size: 2rem;
+    }
+  }
+}
